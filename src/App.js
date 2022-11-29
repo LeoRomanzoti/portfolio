@@ -34,12 +34,16 @@ const App = () => {
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <BsLinkedin color="blue" size={35} />
+                                <BsLinkedin
+                                    color="blue"
+                                    size={35}
+                                    onMouseOver={{}}
+                                />
                             </a>
                         </HeadDiv>
                     </HeadLeft>
                     <HeadRight>
-                        <a href="http://" style={{}}>
+                        <a href="http://">
                             <p>Início</p>
                         </a>
                         <a href="http://">

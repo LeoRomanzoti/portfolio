@@ -3,13 +3,18 @@ import styled from "styled-components";
 export const Container = styled.div`
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(to left, #ff170d, #ff5500, #ffa10d);
-    background-attachment: local;
+    background-image: linear-gradient(to bottom, #ffffff, #6284ff, #ff0000);
 `;
 
 export const Head = styled.div`
     display: flex;
-    border-bottom: 2px groove red;
+    width: 100%;
+    background: rgba(196, 196, 196, 0.11);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    border-bottom: 1.5px groove #ff0000;
 `;
 
 export const HeadLeft = styled.div`
@@ -25,30 +30,46 @@ export const HeadRight = styled.div`
     width: 65%;
     justify-content: space-evenly;
     align-items: center;
+
+    a {
+        font-size: 23px;
+        color: black;
+    }
+    a:link {
+        text-decoration: none;
+    }
+    a:hover {
+        color: #ff0000;
+        font-size: 25px;
+        transition: ease-in-out 0.3s;
+    }
 `;
 
 export const HeadDiv = styled.div`
     padding-right: 5%;
     padding-bottom: 2%;
     padding-top: 2%;
+
+    a:hover {
+        size: 40px;
+    }
 `;
 
 export const Index = styled.div`
-    width: 100vw;
     height: 100vh;
 `;
 
 export const About = styled.div`
-    width: 100vw;
     height: 100vh;
+    background-color: #ff0000;
 `;
 
 export const Projects = styled.div`
-    width: 100vw;
     height: 100vh;
+    background-color: #ff0000;
 `;
 
 export const Skills = styled.div`
-    width: 100vw;
     height: 100vh;
+    background-color: #ff0000;
 `;
