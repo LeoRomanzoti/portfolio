@@ -39,7 +39,7 @@ export const HeadRight = styled.div`
         text-decoration: none;
     }
     a:hover {
-        color: #ff0000;
+        color: blue;
         font-size: 25px;
         transition: ease-in-out 0.3s;
     }
@@ -49,10 +49,6 @@ export const HeadDiv = styled.div`
     padding-right: 5%;
     padding-bottom: 2%;
     padding-top: 2%;
-
-    a:hover {
-        size: 40px;
-    }
 `;
 
 export const Index = styled.div`
@@ -71,5 +67,30 @@ export const Projects = styled.div`
 
 export const Skills = styled.div`
     height: 100vh;
-    background-color: #ff0000;
+    background-color: yellow;
+`;
+
+export const TitleProject = styled.h1`
+    display: flex;
+    font-size: 55px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+`;
+
+export const CardProject = styled.div`
+    display: inline-block;
+    background-color: white;
+    width: 300px;
+    height: 240px;
+    margin: 10px;
+    border-radius: 15px;
+    margin-left: 45px;
+`;
+
+export const Center = styled.div`
+    margin: 0 130px 0 130px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 `;

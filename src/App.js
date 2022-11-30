@@ -1,6 +1,8 @@
 import React from "react";
 import {
     About,
+    CardProject,
+    Center,
     Container,
     Head,
     HeadDiv,
@@ -9,6 +11,7 @@ import {
     Index,
     Projects,
     Skills,
+    TitleProject,
 } from "./style";
 import GlobalStyle from "./styles/global";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
@@ -59,7 +62,29 @@ const App = () => {
                 </Head>
                 <Index></Index>
                 <About></About>
-                <Projects></Projects>
+                <Projects>
+                    <TitleProject>Meus Projetos</TitleProject>
+                    <Center>
+                        <CardProject>
+                            <h1>Hello</h1>
+                        </CardProject>
+                        <CardProject>
+                            <h1>Hello</h1>
+                        </CardProject>
+                        <CardProject>
+                            <h1>Hello</h1>
+                        </CardProject>
+                        <CardProject>
+                            <h1>Hello</h1>
+                        </CardProject>
+                        <CardProject>
+                            <h1>Hello</h1>
+                        </CardProject>
+                        <CardProject>
+                            <h1>Hello</h1>
+                        </CardProject>
+                    </Center>
+                </Projects>
                 <Skills></Skills>
             </Container>
             <GlobalStyle />
