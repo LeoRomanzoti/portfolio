@@ -75,22 +75,32 @@ export const TitleProject = styled.h1`
     font-size: 55px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px;
 `;
 
 export const CardProject = styled.div`
-    display: inline-block;
     background-color: white;
-    width: 300px;
+    width: 240px;
     height: 240px;
-    margin: 10px;
     border-radius: 15px;
-    margin-left: 45px;
+    margin: 20px;
 `;
 
 export const Center = styled.div`
-    margin: 0 130px 0 130px;
-    align-content: center;
+    display: flex;
+    width: 100vw;
+    height: 40vh;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const TitleCard = styled.h2`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+export const SubTitleCard = styled.h5`
+    display: flex;
     justify-content: center;
     align-items: center;
 `;

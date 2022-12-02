@@ -11,6 +11,8 @@ import {
     Index,
     Projects,
     Skills,
+    SubTitleCard,
+    TitleCard,
     TitleProject,
 } from "./style";
 import GlobalStyle from "./styles/global";
@@ -66,22 +68,29 @@ const App = () => {
                     <TitleProject>Meus Projetos</TitleProject>
                     <Center>
                         <CardProject>
-                            <h1>Hello</h1>
+                            <TitleCard>App Superclássicos</TitleCard>
+                            <SubTitleCard>
+                                App autoral estilo cartola para um fantasy game
+                                relacionado ao jogo de futebol de fim de ano
+                                entre amigos.
+                            </SubTitleCard>
                         </CardProject>
                         <CardProject>
-                            <h1>Hello</h1>
+                            <TitleCard>Controle Financeiro</TitleCard>
                         </CardProject>
                         <CardProject>
-                            <h1>Hello</h1>
+                            <TitleCard>Leo-Commerce</TitleCard>
+                        </CardProject>
+                    </Center>
+                    <Center>
+                        <CardProject>
+                            <TitleCard>AirCnc</TitleCard>
                         </CardProject>
                         <CardProject>
-                            <h1>Hello</h1>
+                            <TitleCard>DevRadar</TitleCard>
                         </CardProject>
                         <CardProject>
-                            <h1>Hello</h1>
-                        </CardProject>
-                        <CardProject>
-                            <h1>Hello</h1>
+                            <TitleCard>App Clube</TitleCard>
                         </CardProject>
                     </Center>
                 </Projects>
