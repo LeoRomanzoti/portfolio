@@ -60,18 +60,18 @@ const App = () => {
                         </HeadDiv>
                     </HeadLeft>
                     <HeadRight>
-                        <a href="http://">
+                        <a href="#index">
                             <p>Início</p>
                         </a>
                         <a href="#projects">
                             <p>Projetos</p>
                         </a>
-                        <a href="http://">
+                        <a href="#skills">
                             <p>Habilidades</p>
                         </a>
                     </HeadRight>
                 </Head>
-                <Index>
+                <Index id="index">
                     <IndexLeft>
                         <InfoTitle>Leonardo (Léo) Romanzoti</InfoTitle>
                         <Info>
@@ -117,7 +117,7 @@ const App = () => {
                             })}
                     </Wrap>
                 </Projects>
-                <Skills></Skills>
+                <Skills id="skills"></Skills>
             </Container>
             <GlobalStyle />
         </>
