@@ -1,24 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
-    About,
     CardProject,
-    Center,
     Container,
     Head,
     HeadDiv,
     HeadLeft,
     HeadRight,
+    Image,
     Index,
+    IndexLeft,
+    IndexRight,
+    Info,
+    InfoTitle,
     Projects,
     Skills,
     SubTitleCard,
     TitleCard,
     TitleProject,
+    Wrap,
 } from "./style";
 import GlobalStyle from "./styles/global";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import axios from "axios";
+import { BsGithub, BsLinkedin, BsWhatsapp } from "react-icons/bs";
 
 const App = () => {
+    const [repos, setRepos] = useState([]);
+    useEffect(() => {
+        async function loadData() {
+            const data = await axios.get(
+                "https://api.github.com/users/LeoRomanzoti/repos"
+            );
+            setRepos(data.data);
+        }
+        loadData();
+    }, []);
+
     return (
         <>
             <Container>
@@ -39,11 +55,7 @@ const App = () => {
                                 target="_blank"
                                 rel="noreferrer"
                             >
-                                <BsLinkedin
-                                    color="blue"
-                                    size={35}
-                                    onMouseOver={{}}
-                                />
+                                <BsLinkedin color="blue" size={35} />
                             </a>
                         </HeadDiv>
                     </HeadLeft>
@@ -51,10 +63,7 @@ const App = () => {
                         <a href="http://">
                             <p>Início</p>
                         </a>
-                        <a href="http://">
-                            <p>Sobre</p>
-                        </a>
-                        <a href="http://">
+                        <a href="#projects">
                             <p>Projetos</p>
                         </a>
                         <a href="http://">
@@ -62,37 +71,51 @@ const App = () => {
                         </a>
                     </HeadRight>
                 </Head>
-                <Index></Index>
-                <About></About>
-                <Projects>
+                <Index>
+                    <IndexLeft>
+                        <InfoTitle>Leonardo (Léo) Romanzoti</InfoTitle>
+                        <Info>
+                            Desenvolvedor Front-End | JavaScript | React | React
+                            Native
+                        </Info>
+                        <div>
+                            <Info>
+                                <a
+                                    href="https://wa.me/5519991345129"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    Vamos trabalhar juntos? &nbsp;
+                                    <BsWhatsapp color="green" size={35} />
+                                </a>
+                            </Info>
+                        </div>
+                    </IndexLeft>
+                    <IndexRight>
+                        <Image
+                            src="cartoon.jpg"
+                            alt="Cartoon-Me"
+                            width="70%"
+                            height="70%"
+                        />
+                    </IndexRight>
+                </Index>
+                <Projects id="projects">
                     <TitleProject>Meus Projetos</TitleProject>
-                    <Center>
-                        <CardProject>
-                            <TitleCard>App Superclássicos</TitleCard>
-                            <SubTitleCard>
-                                App autoral estilo cartola para um fantasy game
-                                relacionado ao jogo de futebol de fim de ano
-                                entre amigos.
-                            </SubTitleCard>
-                        </CardProject>
-                        <CardProject>
-                            <TitleCard>Controle Financeiro</TitleCard>
-                        </CardProject>
-                        <CardProject>
-                            <TitleCard>Leo-Commerce</TitleCard>
-                        </CardProject>
-                    </Center>
-                    <Center>
-                        <CardProject>
-                            <TitleCard>AirCnc</TitleCard>
-                        </CardProject>
-                        <CardProject>
-                            <TitleCard>DevRadar</TitleCard>
-                        </CardProject>
-                        <CardProject>
-                            <TitleCard>App Clube</TitleCard>
-                        </CardProject>
-                    </Center>
+                    <Wrap>
+                        {repos
+                            .filter((repo) => repo.id !== 543337936)
+                            .map((repo) => {
+                                return (
+                                    <CardProject>
+                                        <TitleCard>{repo.name}</TitleCard>
+                                        <SubTitleCard>
+                                            {repo.description}
+                                        </SubTitleCard>
+                                    </CardProject>
+                                );
+                            })}
+                    </Wrap>
                 </Projects>
                 <Skills></Skills>
             </Container>
