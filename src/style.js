@@ -67,8 +67,11 @@ export const Projects = styled.div`
 `;
 
 export const Skills = styled.div`
+    display: flex;
     height: 100vh;
-    background-color: yellow;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
 `;
 
 export const TitleProject = styled.h1`
@@ -144,4 +147,16 @@ export const Info = styled.p`
 
 export const Image = styled.img`
     border-radius: 250px;
+`;
+
+export const SkillsImage = styled.img`
+    margin: 0 40px 20px 40px;
+    width: 280px;
+    height: 250px;
+`;
+
+export const TitleSkills = styled.h1`
+    font-size: 55px;
+    padding-bottom: 15px;
+    padding-top: 65px;
 `;
