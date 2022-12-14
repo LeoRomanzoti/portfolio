@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import {
     CardProject,
+    CardSkills,
     Container,
+    DoubleTextSkills,
     Head,
     HeadDiv,
     HeadLeft,
@@ -12,10 +14,12 @@ import {
     IndexRight,
     Info,
     InfoTitle,
+    LinkProjects,
     Projects,
     Skills,
     SkillsImage,
     SubTitleCard,
+    TextSkills,
     TitleCard,
     TitleProject,
     TitleSkills,
@@ -24,6 +28,15 @@ import {
 import GlobalStyle from "./styles/global";
 import axios from "axios";
 import { BsGithub, BsLinkedin, BsWhatsapp } from "react-icons/bs";
+import {
+    SiCss3,
+    SiGit,
+    SiGithub,
+    SiHtml5,
+    SiJavascript,
+    SiMysql,
+    SiReact,
+} from "react-icons/si";
 
 const App = () => {
     const [repos, setRepos] = useState([]);
@@ -114,6 +127,9 @@ const App = () => {
                                         <SubTitleCard>
                                             {repo.description}
                                         </SubTitleCard>
+                                        <LinkProjects href="#">
+                                            Acessar Projeto
+                                        </LinkProjects>
                                     </CardProject>
                                 );
                             })}
@@ -122,42 +138,43 @@ const App = () => {
                 <Skills id="skills">
                     <TitleSkills>Habilidades</TitleSkills>
                     <Wrap>
-                        <SkillsImage
-                            src="https://cdn-icons-png.flaticon.com/512/490/490273.png"
-                            alt="Algoritmo"
-                            width="280px"
-                            height="240px"
-                        />
-                        <SkillsImage
-                            src="https://www.verticalslearning.com/wp-content/uploads/2018/11/curso-de-html5-css3-y-javascript.jpg"
-                            alt="Html-Css-Js"
-                            width="280px"
-                            height="240px"
-                        />
-                        <SkillsImage
-                            src="https://kodytechnolab.com/img/blog/big/reactjs-vs-react-native.jpg"
-                            alt="React-ReactNative"
-                            width="280px"
-                            height="240px"
-                        />
-                        <SkillsImage
-                            src="https://www.nicepng.com/png/detail/93-932207_js-on-light-background-node-js-logo-png.png"
-                            alt="Node"
-                            width="280px"
-                            height="240px"
-                        />
-                        <SkillsImage
-                            src="https://cdn-icons-png.flaticon.com/512/29/29165.png"
-                            alt="SqL"
-                            width="280px"
-                            height="240px"
-                        />
-                        <SkillsImage
-                            src="https://res.cloudinary.com/practicaldev/image/fetch/s--08RY4_Yg--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/i/1o8inq8110mxvqyls276.png"
-                            alt="Git-Github"
-                            width="280px"
-                            height="240px"
-                        />
+                        <CardSkills>
+                            <SkillsImage src="https://cdn-icons-png.flaticon.com/512/644/644628.png" />
+                            <DoubleTextSkills>Algoritmo/</DoubleTextSkills>
+                            <DoubleTextSkills>
+                                Lógica de Programação
+                            </DoubleTextSkills>
+                        </CardSkills>
+                        <CardSkills>
+                            <SiHtml5 color="orangered" size={100} />
+                            <TextSkills>Html 5</TextSkills>
+                        </CardSkills>
+                        <CardSkills>
+                            <SiCss3 color="mediumblue" size={100} />
+                            <TextSkills>Css 3</TextSkills>
+                        </CardSkills>
+                        <CardSkills>
+                            <SiJavascript color="gold" size={100} />
+                            <TextSkills>JavaScript</TextSkills>
+                        </CardSkills>
+                        <CardSkills>
+                            <SiReact color="turquoise" size={100} />
+                            <DoubleTextSkills>React</DoubleTextSkills>
+                            <DoubleTextSkills>React Native</DoubleTextSkills>
+                        </CardSkills>
+                        <CardSkills>
+                            <SiGit color="tomato" size={100} />
+                            <TextSkills>Git</TextSkills>
+                        </CardSkills>
+                        <CardSkills>
+                            <SiGithub color="black" size={100} />
+                            <TextSkills>GitHub</TextSkills>
+                        </CardSkills>
+                        <CardSkills>
+                            <SiMysql color="midnightblue" size={100} />
+                            <DoubleTextSkills>MySQL</DoubleTextSkills>
+                            <DoubleTextSkills>Banco de Dados</DoubleTextSkills>
+                        </CardSkills>
                     </Wrap>
                 </Skills>
             </Container>

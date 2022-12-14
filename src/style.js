@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    width: 100vw;
     height: 100vh;
     background-image: linear-gradient(to top, #ffffff, #6284ff, #ff0000);
 `;
@@ -80,6 +79,10 @@ export const TitleProject = styled.h1`
     padding-top: 65px;
 `;
 
+export const LinkProjects = styled.a`
+    align-items: flex-end;
+`;
+
 export const CardProject = styled.div`
     display: flex;
     background-color: #6284ff;
@@ -98,9 +101,23 @@ export const Wrap = styled.div`
     justify-content: center;
 `;
 
-export const TitleCard = styled.h2``;
+export const TitleCard = styled.h2`
+    color: #ff0000;
+    font-size: 28px;
+    text-decoration: underline;
+    font-style: oblique;
+    margin-bottom: 10px;
+    margin-top: 10px;
+`;
 
-export const SubTitleCard = styled.h5``;
+export const SubTitleCard = styled.p`
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+`;
 
 export const IndexLeft = styled.div`
     display: flex;
@@ -126,7 +143,8 @@ export const IndexRight = styled.div`
 export const InfoTitle = styled.h1``;
 
 export const Info = styled.p`
-    font-size: 28px;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
 
     a {
         color: black;
@@ -150,13 +168,40 @@ export const Image = styled.img`
 `;
 
 export const SkillsImage = styled.img`
-    margin: 0 40px 20px 40px;
-    width: 280px;
-    height: 250px;
+    width: 100px;
+    height: 100px;
 `;
 
 export const TitleSkills = styled.h1`
     font-size: 55px;
     padding-bottom: 15px;
     padding-top: 65px;
+`;
+
+export const CardSkills = styled.div`
+    display: flex;
+    background-color: whitesmoke;
+    width: 240px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 0 20px 20px 20px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+`;
+
+export const TextSkills = styled.p`
+    font-size: 27px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding-top: 20px;
+`;
+
+export const DoubleTextSkills = styled.p`
+    font-size: 20px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    padding-top: 5px;
 `;
