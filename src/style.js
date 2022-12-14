@@ -80,7 +80,21 @@ export const TitleProject = styled.h1`
 `;
 
 export const LinkProjects = styled.a`
-    align-items: flex-end;
+    color: white;
+
+    :link {
+        text-decoration: none;
+    }
+
+    :hover {
+        text-decoration: underline;
+        font-size: 20px;
+        transition: ease-in-out 0.3s;
+    }
+
+    :active {
+        color: red;
+    }
 `;
 
 export const CardProject = styled.div`
@@ -111,8 +125,7 @@ export const TitleCard = styled.h2`
 `;
 
 export const SubTitleCard = styled.p`
-    margin-left: 10px;
-    margin-right: 10px;
+    text-align: center;
     font-size: 16px;
     font-weight: bold;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,

@@ -50,6 +50,15 @@ const App = () => {
         loadData();
     }, []);
 
+    const idUrl = {
+        543337493: "http://superclassicos.pedroimpulcetto.com.br/home.html",
+        486785375: "https://github.com/LeoRomanzoti/aircnc",
+        566996073: "https://controle-financeiro-leoromanzoti.vercel.app",
+        535860515: "https://github.com/LeoRomanzoti/dev-radar",
+        566053777: "https://github.com/LeoRomanzoti/leo-commerce",
+        569933323: "https://github.com/LeoRomanzoti/portfolio",
+    };
+
     return (
         <>
             <Container>
@@ -121,13 +130,17 @@ const App = () => {
                         {repos
                             .filter((repo) => repo.id !== 543337936)
                             .map((repo) => {
+                                const url = idUrl[repo.id];
                                 return (
                                     <CardProject>
                                         <TitleCard>{repo.name}</TitleCard>
                                         <SubTitleCard>
                                             {repo.description}
                                         </SubTitleCard>
-                                        <LinkProjects href="#">
+                                        <LinkProjects
+                                            href={url}
+                                            target="_blank"
+                                        >
                                             Acessar Projeto
                                         </LinkProjects>
                                     </CardProject>
