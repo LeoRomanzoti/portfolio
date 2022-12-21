@@ -133,6 +133,10 @@ export const Description = styled.p`
 
 export const Image = styled.img`
     border-radius: 250px;
+    @media screen and (max-width: 400px) {
+        max-width: 170px;
+        max-height: 170px;
+    }
 `;
 
 export const TitleSkills = styled.h1`
