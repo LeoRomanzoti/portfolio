@@ -31,7 +31,7 @@ export const HeadRight = styled.div`
     align-items: center;
 
     a {
-        font-size: 23px;
+        font-size: 25px;
         color: black;
     }
     a:link {
@@ -39,15 +39,9 @@ export const HeadRight = styled.div`
     }
     a:hover {
         color: blue;
-        font-size: 25px;
+        font-size: 27px;
         transition: ease-in-out 0.3s;
     }
-`;
-
-export const HeadDiv = styled.div`
-    padding-right: 7%;
-    padding-bottom: 2%;
-    padding-top: 2%;
 `;
 
 export const Index = styled.div`
@@ -79,57 +73,11 @@ export const TitleProject = styled.h1`
     padding-top: 65px;
 `;
 
-export const LinkProjects = styled.a`
-    color: white;
-
-    :link {
-        text-decoration: none;
-    }
-
-    :hover {
-        text-decoration: underline;
-        font-size: 20px;
-        transition: ease-in-out 0.3s;
-    }
-
-    :active {
-        color: red;
-    }
-`;
-
-export const CardProject = styled.div`
-    display: flex;
-    background-color: #6284ff;
-    width: 240px;
-    height: 240px;
-    border-radius: 15px;
-    margin: 0 20px 20px 20px;
-    flex-direction: column;
-    align-items: center;
-`;
-
 export const Wrap = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-`;
-
-export const TitleCard = styled.h2`
-    color: #ff0000;
-    font-size: 28px;
-    text-decoration: underline;
-    font-style: oblique;
-    margin-bottom: 10px;
-    margin-top: 10px;
-`;
-
-export const SubTitleCard = styled.p`
-    text-align: center;
-    font-size: 16px;
-    font-weight: bold;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `;
 
 export const IndexLeft = styled.div`
@@ -141,7 +89,7 @@ export const IndexLeft = styled.div`
     width: 50vw;
 
     div {
-        margin-top: 180px;
+        margin-top: 100px;
     }
 `;
 
@@ -156,13 +104,14 @@ export const IndexRight = styled.div`
 export const InfoTitle = styled.h1``;
 
 export const Info = styled.p`
-    font-size: 25px;
+    font-size: 23px;
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
 
     a {
         color: black;
-        padding: 10px;
-        font-size: 38px;
+        padding: 14px;
+        font-size: 32px;
         background-color: white;
         border-radius: 30px;
     }
@@ -171,50 +120,23 @@ export const Info = styled.p`
         text-decoration: none;
     }
     a:hover {
-        font-size: 44px;
+        font-size: 35px;
         transition: ease-in-out 0.3s;
     }
+`;
+
+export const Description = styled.p`
+    font-size: 21px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
 `;
 
 export const Image = styled.img`
     border-radius: 250px;
 `;
 
-export const SkillsImage = styled.img`
-    width: 100px;
-    height: 100px;
-`;
-
 export const TitleSkills = styled.h1`
     font-size: 55px;
     padding-bottom: 15px;
     padding-top: 65px;
-`;
-
-export const CardSkills = styled.div`
-    display: flex;
-    background-color: whitesmoke;
-    width: 240px;
-    height: 200px;
-    border-radius: 15px;
-    margin: 0 20px 20px 20px;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 20px;
-`;
-
-export const TextSkills = styled.p`
-    font-size: 27px;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    padding-top: 20px;
-`;
-
-export const DoubleTextSkills = styled.p`
-    font-size: 20px;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    padding-top: 5px;
 `;

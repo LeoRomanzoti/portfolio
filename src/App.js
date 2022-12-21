@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import {
-    CardProject,
-    CardSkills,
     Container,
-    DoubleTextSkills,
+    Description,
     Head,
-    HeadDiv,
     HeadLeft,
     HeadRight,
     Image,
@@ -14,29 +11,25 @@ import {
     IndexRight,
     Info,
     InfoTitle,
-    LinkProjects,
     Projects,
     Skills,
-    SkillsImage,
-    SubTitleCard,
-    TextSkills,
-    TitleCard,
     TitleProject,
     TitleSkills,
     Wrap,
 } from "./style";
 import GlobalStyle from "./styles/global";
 import axios from "axios";
-import { BsGithub, BsLinkedin, BsWhatsapp } from "react-icons/bs";
-import {
-    SiCss3,
-    SiGit,
-    SiGithub,
-    SiHtml5,
-    SiJavascript,
-    SiMysql,
-    SiReact,
-} from "react-icons/si";
+
+import { BsWhatsapp } from "react-icons/bs";
+
+import CardProject from "./components/CardProject";
+import CardSkills from "./components/CardSkills";
+import { skillsList } from "./components/CardSkills/skills";
+import { menus } from "./components/Menu/menu";
+import avatar from "./assets/cartoon.jpg";
+import Menu from "./components/Menu";
+import { icons } from "./components/Icon/icon";
+import Icon from "./components/Icon";
 
 const App = () => {
     const [repos, setRepos] = useState([]);
@@ -64,35 +57,14 @@ const App = () => {
             <Container>
                 <Head>
                     <HeadLeft>
-                        <HeadDiv>
-                            <a
-                                href="https://github.com/LeoRomanzoti"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <BsGithub color="black" size={35} />
-                            </a>
-                        </HeadDiv>
-                        <HeadDiv>
-                            <a
-                                href="https://www.linkedin.com/in/leonardo-romanzoti-dev/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <BsLinkedin color="blue" size={35} />
-                            </a>
-                        </HeadDiv>
+                        {icons.map((icon) => (
+                            <Icon link={icon.link} icon={icon.icon} />
+                        ))}
                     </HeadLeft>
                     <HeadRight>
-                        <a href="#index">
-                            <p>Início</p>
-                        </a>
-                        <a href="#projects">
-                            <p>Projetos</p>
-                        </a>
-                        <a href="#skills">
-                            <p>Habilidades</p>
-                        </a>
+                        {menus.map((menu) => (
+                            <Menu link={menu.link} text={menu.text} />
+                        ))}
                     </HeadRight>
                 </Head>
                 <Index id="index">
@@ -102,6 +74,14 @@ const App = () => {
                             Desenvolvedor Front-End | JavaScript | React | React
                             Native
                         </Info>
+                        <br />
+                        <br />
+                        <Description>
+                            Focado no front-end com JavaScript utilizando os
+                            conceitos de componentização com React, sempre
+                            buscando me comunicar e evoluir junto com meus
+                            colegas de time.
+                        </Description>
                         <div>
                             <Info>
                                 <a
@@ -117,7 +97,7 @@ const App = () => {
                     </IndexLeft>
                     <IndexRight>
                         <Image
-                            src="cartoon.jpg"
+                            src={avatar}
                             alt="Cartoon-Me"
                             width="70%"
                             height="70%"
@@ -132,18 +112,11 @@ const App = () => {
                             .map((repo) => {
                                 const url = idUrl[repo.id];
                                 return (
-                                    <CardProject>
-                                        <TitleCard>{repo.name}</TitleCard>
-                                        <SubTitleCard>
-                                            {repo.description}
-                                        </SubTitleCard>
-                                        <LinkProjects
-                                            href={url}
-                                            target="_blank"
-                                        >
-                                            Acessar Projeto
-                                        </LinkProjects>
-                                    </CardProject>
+                                    <CardProject
+                                        name={repo.name}
+                                        description={repo.description}
+                                        url={url}
+                                    />
                                 );
                             })}
                     </Wrap>
@@ -151,43 +124,9 @@ const App = () => {
                 <Skills id="skills">
                     <TitleSkills>Habilidades</TitleSkills>
                     <Wrap>
-                        <CardSkills>
-                            <SkillsImage src="https://cdn-icons-png.flaticon.com/512/644/644628.png" />
-                            <DoubleTextSkills>Algoritmo/</DoubleTextSkills>
-                            <DoubleTextSkills>
-                                Lógica de Programação
-                            </DoubleTextSkills>
-                        </CardSkills>
-                        <CardSkills>
-                            <SiHtml5 color="orangered" size={100} />
-                            <TextSkills>Html 5</TextSkills>
-                        </CardSkills>
-                        <CardSkills>
-                            <SiCss3 color="mediumblue" size={100} />
-                            <TextSkills>Css 3</TextSkills>
-                        </CardSkills>
-                        <CardSkills>
-                            <SiJavascript color="gold" size={100} />
-                            <TextSkills>JavaScript</TextSkills>
-                        </CardSkills>
-                        <CardSkills>
-                            <SiReact color="turquoise" size={100} />
-                            <DoubleTextSkills>React</DoubleTextSkills>
-                            <DoubleTextSkills>React Native</DoubleTextSkills>
-                        </CardSkills>
-                        <CardSkills>
-                            <SiGit color="tomato" size={100} />
-                            <TextSkills>Git</TextSkills>
-                        </CardSkills>
-                        <CardSkills>
-                            <SiGithub color="black" size={100} />
-                            <TextSkills>GitHub</TextSkills>
-                        </CardSkills>
-                        <CardSkills>
-                            <SiMysql color="midnightblue" size={100} />
-                            <DoubleTextSkills>MySQL</DoubleTextSkills>
-                            <DoubleTextSkills>Banco de Dados</DoubleTextSkills>
-                        </CardSkills>
+                        {skillsList.map((skill) => (
+                            <CardSkills icon={skill.icon} title={skill.title} />
+                        ))}
                     </Wrap>
                 </Skills>
             </Container>
