@@ -99,8 +99,8 @@ const App = () => {
                         <Image
                             src={avatar}
                             alt="Cartoon-Me"
-                            width="70%"
-                            height="70%"
+                            width="380px"
+                            height="380px"
                         />
                     </IndexRight>
                 </Index>
