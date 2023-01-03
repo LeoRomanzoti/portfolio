@@ -14,6 +14,18 @@ export const Head = styled.div`
     top: 0;
     z-index: 1;
     border-bottom: 1.5px groove #ff0000;
+
+    @media (max-width: 1024px) {
+        width: 830px;
+    }
+
+    @media (max-width: 768px) {
+        width: 450px;
+    }
+
+    @media (max-width: 425px) {
+        width: 400px;
+    }
 `;
 
 export const HeadLeft = styled.div`
@@ -22,6 +34,18 @@ export const HeadLeft = styled.div`
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+    @media (max-width: 1024px) {
+        width: 700px;
+    }
+
+    @media (max-width: 768px) {
+        width: 400px;
+    }
+
+    @media (max-width: 425px) {
+        width: 320px;
+    }
 `;
 
 export const HeadRight = styled.div`
@@ -42,6 +66,36 @@ export const HeadRight = styled.div`
         font-size: 27px;
         transition: ease-in-out 0.3s;
     }
+
+    @media (max-width: 1024px) {
+        a {
+            font-size: 18px;
+        }
+        a:hover {
+            font-size: 20px;
+            transition: ease-in-out 0.3s;
+        }
+    }
+
+    @media (max-width: 768px) {
+        a {
+            font-size: 12px;
+        }
+        a:hover {
+            font-size: 14px;
+            transition: ease-in-out 0.3s;
+        }
+    }
+
+    @media (max-width: 425px) {
+        a {
+            font-size: 10px;
+        }
+        a:hover {
+            font-size: 12px;
+            transition: ease-in-out 0.3s;
+        }
+    }
 `;
 
 export const Index = styled.div`
@@ -49,6 +103,18 @@ export const Index = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 1024px) {
+        width: 700px;
+    }
+
+    @media (max-width: 768px) {
+        width: 400px;
+    }
+
+    @media (max-width: 425px) {
+        width: 320px;
+    }
 `;
 
 export const Projects = styled.div`
@@ -57,6 +123,21 @@ export const Projects = styled.div`
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 1024px) {
+        width: 700px;
+        height: 900px;
+    }
+
+    @media (max-width: 768px) {
+        width: 400px;
+        height: 1650px;
+    }
+
+    @media (max-width: 425px) {
+        width: 320px;
+        height: 1750px;
+    }
 `;
 
 export const Skills = styled.div`
@@ -65,12 +146,28 @@ export const Skills = styled.div`
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 1024px) {
+        width: 700px;
+    }
+
+    @media (max-width: 768px) {
+        width: 400px;
+    }
+
+    @media (max-width: 425px) {
+        width: 320px;
+    }
 `;
 
 export const TitleProject = styled.h1`
     font-size: 55px;
     padding-bottom: 15px;
     padding-top: 65px;
+
+    @media (max-width: 1024px) {
+        font-size: 40px;
+    }
 `;
 
 export const Wrap = styled.div`
@@ -78,6 +175,18 @@ export const Wrap = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+
+    @media (max-width: 1024px) {
+        width: 700px;
+    }
+
+    @media (max-width: 768px) {
+        width: 400px;
+    }
+
+    @media (max-width: 425px) {
+        width: 320px;
+    }
 `;
 
 export const IndexLeft = styled.div`
@@ -91,6 +200,18 @@ export const IndexLeft = styled.div`
     div {
         margin-top: 100px;
     }
+
+    @media (max-width: 1024px) {
+        width: 60%;
+    }
+
+    @media (max-width: 768px) {
+        width: 60%;
+    }
+
+    @media (max-width: 425px) {
+        width: 60%;
+    }
 `;
 
 export const IndexRight = styled.div`
@@ -99,9 +220,33 @@ export const IndexRight = styled.div`
     align-items: center;
     height: 100vh;
     width: 50vw;
+
+    @media (max-width: 1024px) {
+        width: 40%;
+    }
+
+    @media (max-width: 768px) {
+        width: 40%;
+    }
+
+    @media (max-width: 425px) {
+        width: 40%;
+    }
 `;
 
-export const InfoTitle = styled.h1``;
+export const InfoTitle = styled.h1`
+    @media (max-width: 1024px) {
+        font-size: large;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 11px;
+    }
+
+    @media (max-width: 425px) {
+        width: 320px;
+    }
+`;
 
 export const Info = styled.p`
     font-size: 23px;
@@ -123,16 +268,68 @@ export const Info = styled.p`
         font-size: 35px;
         transition: ease-in-out 0.3s;
     }
+
+    @media (max-width: 1024px) {
+        font-size: 12px;
+
+        a {
+            font-size: 16px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        font-size: 8px;
+
+        a {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 425px) {
+        font-size: 6px;
+
+        a {
+            font-size: 10px;
+        }
+    }
 `;
 
 export const Description = styled.p`
     font-size: 21px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+
+    @media (max-width: 1024px) {
+        font-size: 15px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+    }
+
+    @media (max-width: 425px) {
+        width: 320px;
+    }
 `;
 
 export const Image = styled.img`
     border-radius: 250px;
+
+    @media screen and (max-width: 980px) {
+        max-width: 320px;
+        max-height: 320px;
+    }
+
+    @media screen and (max-width: 780px) {
+        max-width: 270px;
+        max-height: 270px;
+    }
+
+    @media screen and (max-width: 580px) {
+        max-width: 230px;
+        max-height: 230px;
+    }
+
     @media screen and (max-width: 480px) {
         max-width: 170px;
         max-height: 170px;
@@ -143,4 +340,16 @@ export const TitleSkills = styled.h1`
     font-size: 55px;
     padding-bottom: 15px;
     padding-top: 65px;
+
+    @media (max-width: 1024px) {
+        font-size: 40px;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
+
+    @media (max-width: 425px) {
+        font-size: 20px;
+    }
 `;

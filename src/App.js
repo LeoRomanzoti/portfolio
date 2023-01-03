@@ -90,7 +90,7 @@ const App = () => {
                                     rel="noreferrer"
                                 >
                                     Vamos trabalhar juntos? &nbsp;
-                                    <BsWhatsapp color="green" size={35} />
+                                    <BsWhatsapp color="green" size={30} />
                                 </a>
                             </Info>
                         </div>
