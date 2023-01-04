@@ -20,11 +20,11 @@ export const Head = styled.div`
     }
 
     @media (max-width: 768px) {
-        width: 450px;
+        width: 430px;
     }
 
     @media (max-width: 425px) {
-        width: 400px;
+        width: 370px;
     }
 `;
 
@@ -109,6 +109,7 @@ export const Index = styled.div`
     }
 
     @media (max-width: 768px) {
+        flex-direction: column;
         width: 400px;
     }
 
@@ -168,6 +169,9 @@ export const TitleProject = styled.h1`
     @media (max-width: 1024px) {
         font-size: 40px;
     }
+    @media (max-width: 768px) {
+        font-size: 30px;
+    }
 `;
 
 export const Wrap = styled.div`
@@ -199,6 +203,14 @@ export const IndexLeft = styled.div`
 
     div {
         margin-top: 100px;
+
+        @media (max-width: 768px) {
+            margin-top: 15px;
+        }
+
+        @media (max-width: 425px) {
+            margin-top: 15px;
+        }
     }
 
     @media (max-width: 1024px) {
@@ -240,11 +252,15 @@ export const InfoTitle = styled.h1`
     }
 
     @media (max-width: 768px) {
-        font-size: 11px;
+        font-size: larger;
+        margin-top: 55px;
     }
 
     @media (max-width: 425px) {
+        font-size: 22px;
         width: 320px;
+        text-align: center;
+        margin-top: 55px;
     }
 `;
 
@@ -278,7 +294,7 @@ export const Info = styled.p`
     }
 
     @media (max-width: 768px) {
-        font-size: 8px;
+        font-size: 13px;
 
         a {
             font-size: 13px;
@@ -286,7 +302,7 @@ export const Info = styled.p`
     }
 
     @media (max-width: 425px) {
-        font-size: 6px;
+        font-size: 12px;
 
         a {
             font-size: 10px;
@@ -300,15 +316,15 @@ export const Description = styled.p`
     text-align: center;
 
     @media (max-width: 1024px) {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     @media (max-width: 768px) {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     @media (max-width: 425px) {
-        width: 320px;
+        font-size: 15px;
     }
 `;
 
@@ -320,17 +336,17 @@ export const Image = styled.img`
         max-height: 320px;
     }
 
-    @media screen and (max-width: 780px) {
-        max-width: 270px;
-        max-height: 270px;
+    @media screen and (max-width: 1024px) {
+        max-width: 250px;
+        max-height: 250px;
     }
 
-    @media screen and (max-width: 580px) {
-        max-width: 230px;
-        max-height: 230px;
+    @media screen and (max-width: 768px) {
+        max-width: 180px;
+        max-height: 180px;
     }
 
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 425px) {
         max-width: 170px;
         max-height: 170px;
     }
@@ -350,6 +366,6 @@ export const TitleSkills = styled.h1`
     }
 
     @media (max-width: 425px) {
-        font-size: 20px;
+        font-size: 30px;
     }
 `;
