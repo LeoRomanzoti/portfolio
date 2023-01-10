@@ -137,7 +137,7 @@ export const Projects = styled.div`
 
     @media (max-width: 425px) {
         width: 320px;
-        height: 1750px;
+        height: 1890px;
     }
 `;
 
