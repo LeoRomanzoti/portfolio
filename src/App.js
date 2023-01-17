@@ -44,7 +44,7 @@ const App = () => {
     }, []);
 
     const idUrl = {
-        543337493: "http://superclassicos.pedroimpulcetto.com.br/home.html",
+        543337493: "https://pagina-superclassicos.vercel.app/",
         486785375: "https://github.com/LeoRomanzoti/aircnc",
         566996073: "https://controle-financeiro-leoromanzoti.vercel.app",
         535860515: "https://github.com/LeoRomanzoti/dev-radar",
@@ -109,7 +109,11 @@ const App = () => {
                     <TitleProject>Meus Projetos</TitleProject>
                     <Wrap>
                         {repos
-                            .filter((repo) => repo.id !== 543337936)
+                            .filter(
+                                (repo) =>
+                                    repo.id !== 543337936 &&
+                                    repo.id !== 590146014
+                            )
                             .map((repo) => {
                                 const url = idUrl[repo.id];
                                 return (
