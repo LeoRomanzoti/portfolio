@@ -51,6 +51,7 @@ const App = () => {
         566053777: "https://github.com/LeoRomanzoti/leo-commerce",
         569933323: "https://github.com/LeoRomanzoti/portfolio",
         587093217: "https://github.com/LeoRomanzoti/leo-commerce-front",
+        590972077: "https://github.com/LeoRomanzoti/tindev",
     };
 
     return (

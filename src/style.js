@@ -111,6 +111,8 @@ export const Index = styled.div`
     @media (max-width: 768px) {
         flex-direction: column;
         width: 400px;
+        margin: 0 auto;
+        text-align: center;
     }
 
     @media (max-width: 425px) {
@@ -137,7 +139,7 @@ export const Projects = styled.div`
 
     @media (max-width: 425px) {
         width: 320px;
-        height: 1890px;
+        height: 2190px;
     }
 `;
 
