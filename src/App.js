@@ -15,12 +15,11 @@ import {
     Skills,
     TitleProject,
     TitleSkills,
+    Whatsapp,
     Wrap,
 } from "./style";
 import GlobalStyle from "./styles/global";
 import axios from "axios";
-
-import { BsWhatsapp } from "react-icons/bs";
 
 import CardProject from "./components/CardProject";
 import CardSkills from "./components/CardSkills";
@@ -42,17 +41,6 @@ const App = () => {
         }
         loadData();
     }, []);
-
-    const idUrl = {
-        543337493: "https://pagina-superclassicos.vercel.app/",
-        486785375: "https://github.com/LeoRomanzoti/aircnc",
-        566996073: "https://controle-financeiro-leoromanzoti.vercel.app",
-        535860515: "https://github.com/LeoRomanzoti/dev-radar",
-        566053777: "https://github.com/LeoRomanzoti/leo-commerce",
-        569933323: "https://github.com/LeoRomanzoti/portfolio",
-        587093217: "https://github.com/LeoRomanzoti/leo-commerce-front",
-        590972077: "https://github.com/LeoRomanzoti/tindev",
-    };
 
     return (
         <>
@@ -92,7 +80,7 @@ const App = () => {
                                     rel="noreferrer"
                                 >
                                     Vamos trabalhar juntos? &nbsp;
-                                    <BsWhatsapp color="green" size={30} />
+                                    <Whatsapp />
                                 </a>
                             </Info>
                         </div>
@@ -116,12 +104,11 @@ const App = () => {
                                     repo.id !== 590146014
                             )
                             .map((repo) => {
-                                const url = idUrl[repo.id];
                                 return (
                                     <CardProject
                                         name={repo.name}
                                         description={repo.description}
-                                        url={url}
+                                        url={repo.homepage}
                                     />
                                 );
                             })}

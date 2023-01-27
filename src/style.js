@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BsWhatsapp } from "react-icons/bs";
 
 export const Container = styled.div`
     height: 100vh;
@@ -20,11 +21,11 @@ export const Head = styled.div`
     }
 
     @media (max-width: 768px) {
-        width: 430px;
+        width: 440px;
     }
 
     @media (max-width: 425px) {
-        width: 370px;
+        width: 400px;
     }
 `;
 
@@ -122,24 +123,22 @@ export const Index = styled.div`
 
 export const Projects = styled.div`
     display: flex;
-    height: 100vh;
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
 
     @media (max-width: 1024px) {
         width: 700px;
-        height: 900px;
+        margin: 0 auto;
     }
 
     @media (max-width: 768px) {
         width: 400px;
-        height: 1650px;
+        margin: 0 auto;
     }
 
     @media (max-width: 425px) {
         width: 320px;
-        height: 2190px;
     }
 `;
 
@@ -152,10 +151,12 @@ export const Skills = styled.div`
 
     @media (max-width: 1024px) {
         width: 700px;
+        margin: 0 auto;
     }
 
     @media (max-width: 768px) {
         width: 400px;
+        margin: 0 auto;
     }
 
     @media (max-width: 425px) {
@@ -300,6 +301,7 @@ export const Info = styled.p`
 
         a {
             font-size: 13px;
+            size: 20;
         }
     }
 
@@ -310,6 +312,10 @@ export const Info = styled.p`
             font-size: 10px;
         }
     }
+`;
+
+export const Whatsapp = styled(BsWhatsapp)`
+    color: green;
 `;
 
 export const Description = styled.p`
